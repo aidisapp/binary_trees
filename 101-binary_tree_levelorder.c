@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * level_order_queue_enqueue - this function enqueues a node into
- * the level-order traversal queue
+ * level_order_queue_enqueue - Enqueues a node into the level-order
+ *                             traversal queue
  * @q: The current level-order traversal queue
  * @nd: The node to enqueue
  *
@@ -10,7 +10,7 @@
  */
 
 level_order_queue_t *level_order_queue_enqueue(level_order_queue_t *q,
-						binary_tree_t *nd)
+                                                binary_tree_t *nd)
 {
 	level_order_queue_t *new_nd, *tmp;
 
@@ -33,9 +33,8 @@ level_order_queue_t *level_order_queue_enqueue(level_order_queue_t *q,
 }
 
 /**
- * level_order_queue_dequeue - this function dequeues a node
- * from the level-order
- * traversal queue
+ * level_order_queue_dequeue - Dequeues a node from the level-order
+ *                             traversal queue
  * @q: The current level-order traversal queue
  *
  * Return: A pointer to the updated level-order traversal queue
@@ -56,12 +55,11 @@ level_order_queue_t *level_order_queue_dequeue(level_order_queue_t *q)
 }
 
 /**
- * binary_tree_levelorder - this goes through a binary tree using level-order
- * traversal
+ * binary_tree_levelorder - Goes through a binary tree using level-order
+ *                          traversal
  * @tr: A pointer to the root node of the tree to traverse
  * @f: A pointer to a function to call for each node
  */
-
 void binary_tree_levelorder(const binary_tree_t *tr, void (*f)(int))
 {
 	level_order_queue_t *q = NULL;
